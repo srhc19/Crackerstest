@@ -1,0 +1,120 @@
+img {
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+    position: relative;
+  }
+  
+  .main-container {
+    overflow-x: hidden;
+    background-image: url(../../../../public/pexels-cottonbro-5124894.jpg); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  .second-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-title {
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    color: #fff;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: rgba(116, 114, 114, 0.318);
+    border-radius: 5px;
+    margin-top: 70px;
+  }
+  .form-element {
+    font-family: "Lora", serif;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    min-width: 300px;
+    color: #fff;
+  }
+  .register_form{
+    background-color: #8e8e95;
+  }
+  h1 {
+    margin: 50px auto;
+    font-family: "Lora", serif;
+    color: #fff;
+  }
+  .getstarted-btn {
+    background-color: #0c280d;
+    color: #fff;
+    padding: 2px 15px;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+    stroke: #fff;
+  
+    color: #fff;
+    fill: #fff;
+  }
+  .errormessage {
+    color: white;
+    font-family: "Lora", serif;
+    font-weight: 700;
+    max-height: 5px;
+  }
+  .message {
+    margin-top: 10px;
+    padding: 5px 10px;
+    color: white;
+    font-family: "Lora", serif;
+    font-weight: 700;
+    background-color: rgba(116, 114, 114, 0.727);
+    border-radius: 5px;
+  }
+  .link:hover {
+    text-decoration: underline;
+    color: #999;
+  }
+  
+  @media (min-width: 768px) {
+    .content {
+      /* max-width: 500px;  */
+      padding: 20px;
+    }
+    .register_form{
+      min-width: 500px;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+  
+    button {
+      font-size: 18px;
+    }
+  }
+  
+  
+  @media (min-width: 1200px) {
+    .main-container {
+      padding: 0 10%;
+    }
+  }
+  

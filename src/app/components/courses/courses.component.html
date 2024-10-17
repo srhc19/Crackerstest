@@ -1,0 +1,42 @@
+<div class="course-list-container">
+    <!-- <div class="logout-section">
+        <button class="logout-button" (click)="onLogout()">Logout</button>
+      </div> -->
+  <div class="filter-section">
+    <input type="text" placeholder="Search courses..." [(ngModel)]="searchTerm" (input)="onSearch()" class="search-input" />
+    
+    <select [(ngModel)]="sortOrder" (change)="onSort()" class="filter-dropdown">
+      <option value="new">Sort by: Newest</option>
+      <option value="rating">Sort by: Rating</option>
+      <option value="price">Sort by: Price</option>
+    </select>
+    
+    <select [(ngModel)]="selectedCategory" (change)="onCategoryChange()" class="filter-dropdown">
+      <option value="">All Categories</option>
+      <option value="Development">Development</option>
+      <option value="Data Science">Data Science</option>
+      <option value="Design">Design</option>
+    </select>
+  </div>
+
+  <div class="course-grid">
+    <div class="course-card" *ngFor="let course of filteredCourses">
+      <img [src]="course.imageUrl" alt="{{ course.title }}" class="course-image" />
+      <h3 class="course-title">{{ course.title }}</h3>
+      <p class="course-category">{{ course.category }}</p>
+      <p class="course-instructor">By {{ course.instructor }}</p>
+      <div class="course-rating">
+        <span>{{ course.rating }}★</span>
+      </div>
+      <p class="course-price">{{ course.price | currency }}</p>
+    </div>
+  </div>
+
+ 
+  <div class="pagination-section">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+  </div>
+</div>
+
